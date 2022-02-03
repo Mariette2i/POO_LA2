@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/BDD_SEL_OK</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">mariette</property>
+        <property name="connection.password">mariette</property>
+        <mapping class="entite.E_TExCascadeFk"/>
+        <mapping class="entite.E_TExCascadeRef"/>
+        <mapping class="test_cascade.E_ref"/>
+        <mapping class="test_cascade.E_fk"/>
+        <mapping class="entite.E_TMembre"/>
+        <mapping class="entite.E_TMembre_TEST"/>
+        <mapping class="entite.E_TParticulier_TEST"/>
+        <mapping class="entite.E_TProfessionnel_TEST"/>
+        <mapping class="entite.E_TVacancier_TEST"/>
+        <mapping class="entite.E_TTransaction"/>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
